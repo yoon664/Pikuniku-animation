@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    background-color: #fce883;
+}
+.ground {
+    width: 100%;
+    height: 200px;
+    background-color: #3498db;
+    position: absolute;
+    bottom: 0;
+}
+.flower {
+    position: absolute;
+    bottom: 200px;
+}
+.flower.orange {left: 100px;}
+.flower.blue {left: 200px;}
+.flower.pink {left: 300px;}
+.flower.oranget {right: 100px;}
+.flower.bluet {right: 200px;}
+.flower.pinkt {right: 300px;}
+.flower.orangett {right: 500px;}
+.flower.bluett {right: 400px;}
+.flower.pinktt {right: 600px;}
+
+.stem {/*꽃 줄기*/
+    width: 8px;
+    height: 50px;
+    background-color: green;
+    margin: 0 auto;
+}
+.leaf {
+    width: 20px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes leaf-left {
+    0% {transform: rotate(30deg);}
+    50% {transform: rotate(45deg);}
+    100% {transform: rotate(30deg);}
+}
+@keyframes leaf-right {
+    0% {transform: rotate(-30deg);}
+    50% {transform: rotate(-45deg);}
+    100% {transform: rotate(-30deg);}
+}
+
+.leaf.left {
+    left: -15px;
+    top: 20px;
+    transform: rotate(30deg);
+    animation: leaf-left 2s ease-in-out infinite;
+}
+.leaf.right {
+    right: -15px;
+    top: 20px;
+    transform: rotate(-30deg);
+    animation: leaf-right 2s ease-in-out infinite;
+}
+.petal {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -11px;
+}
+.petal.orange {
+    background-color: orange;
+}
+.petal.blue {
+    background-color: blue;
+}
+.petal.pink {
+    background-color: pink;
+}
+.center {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: -3px;
+} 
+.red-character {
+    position: absolute;
+    bottom: 240px;
+    left: 600px;
+    width: 55px;
+    height: 40px;
+    background-color: red;
+    border-radius: 45%;
+    animation: redani 4s infinite;
+}
+.red-character .leg {
+    position: absolute;
+    bottom: -40px;
+    width: 6px;
+    height: 50px;
+    background-color: red;
+}
+@keyframes legani-left {
+    0% {transform: rotate(0);}
+    50% {transform: rotate(15deg);}
+    75% {transform: rotate(25deg);}
+    85% {transform: rotate(0);}
+    100% {transform: rotate(0);}
+}
+@keyframes legani-right {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-15deg);}
+    75% {transform: rotate(-25deg);}
+    85% {transform: rotate(0);}
+    100% {transform: rotate(0);}
+}
+
+.red-character .leg.left {
+    left: 9px;
+    animation: legani-left 2s ease-in-out infinite;
+}
+.red-character .leg.right {
+    right: 9px;
+    animation: legani-right 2s ease-in-out infinite;
+}
+
+@keyframes redani {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-300px);}
+    75%{transform: translateY(-290px);}
+    100% {transform: translateY(0);}
+}
+.eye {
+    position: absolute;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+.eye.left {
+    left: 13px;
+}
+.eye.right {
+    right: 13px;
+}
+
+.apple {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: floatapple 10s linear infinite;
+    top: -30px;
+}
+.apple::before {
+    content: '';
+    width: 4px;
+    height: 10px;
+    background-color: brown;
+    position: absolute;
+    top: -5px;
+    left: 7px;
+    border-radius: 2px;
+}
+@keyframes floatapple {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(400px, 150px);
+    }
+    50% {
+        transform: translate(800px, 450px);
+    }
+    75% {
+        transform: translate(400px, 550px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.tree {
+    position: absolute;
+    bottom: 30%;
+    width: 8%;
+    height: 40%;
+    left: 80%;
+    background-color: brown;
+}
